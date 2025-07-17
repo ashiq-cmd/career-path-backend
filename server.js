@@ -8,6 +8,10 @@ const port = 5000;
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Career Path Backend is running 🚀");
+});
+
 
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
